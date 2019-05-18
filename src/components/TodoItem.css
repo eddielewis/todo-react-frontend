@@ -1,0 +1,100 @@
+ul li {
+  width: 100%;
+  min-height: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
+  line-height: 22px;
+
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  margin: 0 0 10px 0;
+  padding: 14px 100px 14px 14px;
+}
+
+ul li:last-of-type {
+  margin: 0;
+}
+
+.buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: #edf0f1;
+
+}
+
+svg {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -11px;
+}
+
+li svg.complete {
+  border-radius: 11px;
+  border: 1.5px solid #25b99a;
+}
+
+li:not(.completed) svg.complete .fill {
+  fill: #25b99a;
+}
+
+li:not(.completed) svg.complete:hover .fill {
+  fill: #fff;
+}
+
+li:not(.completed) svg.complete:hover {
+  background: rgba(37, 185, 154, 0.5);
+}
+
+li.completed svg.complete {
+  background: #25b99a;
+  border: 0px;
+}
+
+li.completed svg.complete .fill {
+  fill: #fff;
+}
+
+li svg.remove .fill {
+  fill: #c0cecb;
+}
+
+li svg.remove:hover .fill {
+  fill: #e85656
+}
+
+
+svg .fill {
+  transition: background 0.2s ease;
+}
